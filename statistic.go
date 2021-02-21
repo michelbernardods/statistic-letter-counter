@@ -7,30 +7,29 @@ import (
 )
 
 func main() {
-	palavras := os.Args[1:]
-	estatisticas := colherEstatisticas(palavras)
-	imprimir(estatisticas)
+	words := os.Args[1:]
+	statistics := saveStatistics(words)
+	print(statistics)
 }
 
-func colherEstatisticas(palavras []string) map[string]int {
-	estatisticas := make(map[string]int)
-	for _, palavra := range palavras {
-		inicial := strings.ToUpper(string(palavra[0]))
+func saveStatistics(words []string) map[string]int {
+	statistics := make(map[string]int)
+	for _, words := range words {
+		initial := strings.ToUpper(string(words[0]))
+		counter, found := statistics[initial]
 
-		contador, encontrado := estatisticas[inicial]
-		if encontrado {
-			estatisticas[inicial] = contador + 1
+		if found {
+			statistics[initial] = counter + 1
 		} else {
-			estatisticas[inicial] = 1
+			statistics[initial] = 1
 		}
 	}
-	return estatisticas
+	return statistics
 }
 
-func imprimir(estatisticas map[string]int) {
-	fmt.Println("Contagem de palavras iniciadas em cada letra:")
-	for inicial, contador := range estatisticas {
-		fmt.Printf("%s = %d\n", inicial, contador)
+func print(statistics map[string]int) {
+	fmt.Println("Count of words started in each letter:")
+	for initial, counter := range statistics {
+		fmt.Printf("%s = %d\n", initial, counter)
 	}
-
 }
