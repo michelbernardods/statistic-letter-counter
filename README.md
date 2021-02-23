@@ -12,13 +12,13 @@
 ### Input
 
 ``` 
-  go run statistic.go Go or GoLang, as it is called, is a robust system-level language used for programming across large-scale network servers and big distributed systems.
+go run statistic.go Go or GoLang, as it is called, is a robust system-level language used for programming across large-scale network servers and big distributed systems.
 ```
 
 ### Output
 
 ``` 
-  Count of words started in each letter:
+Count of words started in each letter:
 I = 3
 F = 1
 P = 1
