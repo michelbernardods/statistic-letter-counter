@@ -9,13 +9,13 @@
 
 ## Example
 
-### -> input
+### Input
 
 ``` 
   go run statistic.go Go or GoLang, as it is called, is a robust system-level language used for programming across large-scale network servers and big distributed systems.
 ```
 
-### -> output
+### Output
 
 ``` 
   Count of words started in each letter:
